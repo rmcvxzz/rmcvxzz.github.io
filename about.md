@@ -4,12 +4,16 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+hey guys, im rmcvxzz and im 21
 
-### More Information
+i like to code stuff, but the majority of my projects are archived cuz i lost motivation
 
-A place to include any other types of information that you'd like to include about yourself.
+ye im the one developing flOw psp decomp ig
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+discord: rmcvxzz
+
+twitter: rmcvxzz
+
+everything: rmcvxzz
