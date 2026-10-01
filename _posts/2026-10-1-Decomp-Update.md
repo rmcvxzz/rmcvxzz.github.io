@@ -17,5 +17,3 @@ Third, i just wanna remind you that this decompilation may __take a LOT of time_
 decompiled assembly files (.s) by Ghidra, and must match the flOw US (NPUG-80086) ROM.
 
 I think that's all, cya later and take care.
-
-<sup><sub>R(izqi), i know you.</sub></sup>
