@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Overvise &amp; Efficiency Update
+title: Overvise and Efficiency Update
 ---
 
-You might see that this blog has new stuff. It's part of the Overvise & Efficiency Update.
+You might see that this blog has new stuff. It's part of the Overvise and Efficiency Update.
 
 Overvise stands for "Over-revised", because this commit has some pretty ***sick*** changes to my blog.
 
