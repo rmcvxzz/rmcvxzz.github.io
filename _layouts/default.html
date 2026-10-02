@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>
+      {% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}
+    </title>
 
     {% include meta.html %}
 
@@ -12,39 +14,93 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      })();
+    </script>
   </head>
 
   <body>
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <a href="{{ site.baseurl }}/" class="site-avatar">
+            <img src="{{ site.avatar }}" alt="{{ site.name }}" />
+          </a>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <h1 class="site-name">
+              <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+            </h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
 
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.baseurl }}/projects">Projects</a>
+            <button
+              id="theme-toggle"
+              aria-label="Toggle Dark Mode"
+              style="
+                background: none;
+                border: none;
+                cursor: pointer;
+                font-size: 1.1rem;
+                margin-left: 15px;
+              "
+            >
+              🌙
+            </button>
           </nav>
         </header>
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+    <div id="main" role="main" class="container">{{ content }}</div>
 
     <div class="wrapper-footer">
       <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
+        <footer class="footer">{% include svg-icons.html %}</footer>
       </div>
     </div>
+
+    <script>
+      const toggleBtn = document.getElementById('theme-toggle');
+      const dynamicIcons = document.querySelectorAll('.dynamic-icon');
+
+      function getActiveTheme() {
+        return document.documentElement.getAttribute('data-theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      }
+
+      function applyThemeUI(theme) {
+        if (toggleBtn) {
+          toggleBtn.innerText = theme === 'dark' ? '☀️' : '🌙';
+        }
+        dynamicIcons.forEach(icon => {
+          const newSrc = icon.getAttribute(`data-${theme}`);
+          if (newSrc) {
+            icon.src = newSrc;
+          }
+        });
+      }
+
+      applyThemeUI(getActiveTheme());
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const nextTheme = getActiveTheme() === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('theme', nextTheme);
+          applyThemeUI(nextTheme);
+        });
+      }
+    </script>
 
     {% include analytics.html %}
   </body>

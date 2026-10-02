@@ -4,16 +4,12 @@ title: About
 permalink: /about/
 ---
 
-hey guys, im rmcvxzz and im 21
+Hello, i'm rmcvxzz.
 
-i like to code stuff, but the majority of my projects are archived cuz i lost motivation
+I'm 22 years old & i love programming.
 
-ye im the one developing flOw psp decomp ig
+I mostly code in GML or C, but i can also code in other languages.
 
-### Contact me
+[This page]({{ site.baseurl }}/projects) is where all my list of projects live.
 
-discord: rmcvxzz
-
-twitter: rmcvxzz
-
-everything: rmcvxzz
+You can also check [this](https://github.com/rmcvxzzs-stuffs) to see their source code.

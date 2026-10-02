@@ -21,14 +21,15 @@ footer-links:
   email:
   facebook:
   flickr:
-  github: 
+  github: rmcvxzz
   instagram:
   linkedin:
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: paigeampersand
+  medal: rmcvxzz
   twitter: rmcvxzz
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: user/rmcvxzzonyt
+  youtube: /@rmcvxzzonyt
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
@@ -58,6 +59,9 @@ permalink: /:title/
 # The release of Jekyll Now that you're using
 version: v1.2.0
 
+# NOTE: Temporary to test posts!! Comment after usage.
+future: true
+
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
@@ -73,9 +77,10 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - webrick # Allow it to host locally
 
 # Exclude these files from your production _site
 exclude:

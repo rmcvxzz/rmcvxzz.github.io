@@ -1,10 +1,10 @@
-
 //
 // VARIABLES
 //
 
 // Colors
 $blue: #4183C4;
+$navyDark: #0f131f;
 
 // Grays
 $black: #000;
@@ -13,6 +13,29 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #0f131f; /* Light mode text */
+  --link-color: #0066cc;
+  --border-color: #eee;
+}
+
+html[data-theme="dark"] {
+  --bg-color: #0f131f; /* Dark mode background */
+  --text-color: #e0e0e0;
+  --link-color: #82aaff;
+  --border-color: #232a3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --bg-color: #0f131f;
+    --text-color: #e0e0e0;
+    --link-color: #82aaff;
+    --border-color: #232a3d;
+  }
+}
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;

@@ -11,8 +11,8 @@ flOw decompilation for the PSP
 So, for the past few days, i've been working on a decomp of flOw for the PSP (US rom). 
 
 
-Well, like many decomps out there, i chose a Byte-for-Byte matching decomp, with the GCC 3.3.3+allegrex-2.2.2-psp-1.3.1 (woah long name)
-compiler provided by [decomp.me](https://decomp.me). (special thanks!)
+Well, like many decomps out there, i chose a Byte-for-Byte matching decomp, with the GCC 3.3.3+allegrex-2.2.2-psp-1.3.1 (woah long name) for diffing & PSP SDK 6.60 for compiling.
+GCC Compiler provided by [decomp.me](https://decomp.me). (special thanks!)
 
 
 Now, at the time of this post.... i *__WASN'T__* confident enough to release this code since it hasn't been cleaned, and 
