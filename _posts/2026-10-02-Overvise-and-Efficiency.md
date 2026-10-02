@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overvise & Efficiency Update
+title: Overvise &amp; Efficiency Update
 ---
 
 You might see that this blog has new stuff. It's part of the Overvise & Efficiency Update.
