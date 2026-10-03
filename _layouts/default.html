@@ -7,10 +7,6 @@
 
     {% include meta.html %}
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
@@ -43,6 +39,7 @@
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
             <a href="{{ site.baseurl }}/projects">Projects</a>
+            <a href="{{ site.baseurl }}/guides">Guides</a>
             <button
               id="theme-toggle"
               aria-label="Toggle Dark Mode"
@@ -71,7 +68,6 @@
 
     <script>
       const toggleBtn = document.getElementById('theme-toggle');
-      const dynamicIcons = document.querySelectorAll('.dynamic-icon');
 
       function getActiveTheme() {
         return document.documentElement.getAttribute('data-theme') ||
@@ -82,12 +78,6 @@
         if (toggleBtn) {
           toggleBtn.innerText = theme === 'dark' ? '☀️' : '🌙';
         }
-        dynamicIcons.forEach(icon => {
-          const newSrc = icon.getAttribute(`data-${theme}`);
-          if (newSrc) {
-            icon.src = newSrc;
-          }
-        });
       }
 
       applyThemeUI(getActiveTheme());

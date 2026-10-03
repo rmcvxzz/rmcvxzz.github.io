@@ -8,7 +8,7 @@ You might see that this blog has new stuff. It's part of the Overvise and Effici
 Overvise stands for "Over-revised", because this commit has some pretty ***sick*** changes to my blog.
 
 Major changes include:
-- Upgraded Jekyll from 3.0 -> 4.0
+- Upgraded Jekyll from 3.0 -> 4.0 support
 - Dark Mode
 - New "Projects" page
 
