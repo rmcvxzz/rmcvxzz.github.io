@@ -1,0 +1,10 @@
+{% if page.previous or page.next %}
+<div class="post-nav">
+  {% if page.previous %}
+  <a class="post-nav-btn" href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title | escape }}" aria-label="Previous post: {{ page.previous.title | escape }}">&laquo; Previous</a>
+  {% endif %}
+  {% if page.next %}
+  <a class="post-nav-btn" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title | escape }}" aria-label="Next post: {{ page.next.title | escape }}">Next &raquo;</a>
+  {% endif %}
+</div>
+{% endif %}

@@ -110,6 +110,108 @@ img {
   max-width: 100%;
 }
 
+// Responsive video embeds (YouTube etc.)
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; // 16:9
+  height: 0;
+  margin: 15px 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+iframe, video {
+  max-width: 100%;
+}
+
+// Share buttons
+.share {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  strong {
+    margin-right: 4px;
+    color: var(--text-muted, $gray);
+  }
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  color: #fff;
+  transition: opacity 0.15s, transform 0.15s;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  &:hover, &:active {
+    color: #fff;
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+
+  &.x { background: #14171a; }
+  &.facebook { background: #3b5998; }
+  &.reddit { background: #ff4500; }
+  &.telegram { background: #26a5e4; }
+  &.whatsapp { background: #25d366; }
+  &.linkedin { background: #0a66c2; }
+  &.tumblr { background: #36465d; }
+  &.email { background: #777; }
+  &.x { border: 1px solid #3a3f4b; }
+}
+
+// Share + previous/next row
+.post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  margin: 25px 0 10px;
+}
+
+.post-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.post-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 15px;
+  white-space: nowrap;
+  color: var(--text-color);
+  transition: opacity 0.15s, transform 0.15s;
+
+  &:hover, &:active {
+    color: var(--text-color);
+    border-color: var(--link-color);
+    transform: translateY(-2px);
+  }
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;

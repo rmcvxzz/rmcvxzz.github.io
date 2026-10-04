@@ -1,10 +1,7 @@
 > Codename: RemBLOG
 
 # rmcvxzz
-Hey. This is my personal blog (& technically my portfolio) where i talk about stuff. 
-
-Mostly updates for my projects... i guess.
-At the time of updating, the flOw decomp is the one that is most talked.
+Hey. This is my personal blog (& technically my portfolio) where i talk about stuff, mostly updates for my projects... i guess.
 
 It's currently using Jekyll Now v1.2.0, __heavily modified__ to better suit for Jekyll 4.0
 and to modernize it.
